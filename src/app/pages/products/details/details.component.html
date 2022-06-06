@@ -1,0 +1,30 @@
+<div class="card mt-2">
+    <div class="card-header">
+        Product Details
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                Name: <h5>{{product.name}}</h5>
+            </li>
+            <li class="list-group-item">
+                Description <h5>{{product.description}}</h5>
+            </li>
+            <li class="list-group-item">
+                Upload Data: <h5>{{product.uploadDate}}</h5>
+            </li>
+
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button (click)="onClickEdit()" class="btn btn-outline-info m-1 btn-sm">
+            Edit
+        </button>
+        <button (click)="onClickDelete(product.id)" class="btn btn-outline-primary m-1 btn-sm">
+            Delete
+        </button>
+    </div>
+</div>
+<button (click)="onClickBack()" class="btn btn-outline-secondary mt-2 ">
+    Go Back To List
+</button>
