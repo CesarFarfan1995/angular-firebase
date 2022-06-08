@@ -9,17 +9,28 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { AngularFireModule} from '@angular/fire/compat'
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { AngularFirestoreModule} from '@angular/fire/compat/firestore'
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { RegisterModule } from './pages/auth/register/register.module';
+import { LoginModule } from './pages/auth/login/login.module';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileModule } from './pages/profile/profile.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    HeaderComponent
+    
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    RegisterModule,
+    LoginModule,
+    ProfileModule,
     ProductFromModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
